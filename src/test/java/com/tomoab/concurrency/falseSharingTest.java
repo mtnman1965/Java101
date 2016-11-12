@@ -13,6 +13,5 @@ public class falseSharingTest {
         // demonstrate false sharing impact on performance
         FalseSharing fs = new FalseSharing();
         fs.run();
-
     }
 }
