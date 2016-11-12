@@ -15,13 +15,36 @@ import static org.junit.Assert.assertFalse;
  * dequeTest
  */
 public class dequeTest {
+    private Product honda = new Product("Honda", 34000, 1800);
+    private Product acura = new Product("Acura", 49000, 2200);
+    private Product toyota = new Product("Toyota", 34500, 1500);
+    private Product fiat = new Product("Fiat", 36000, 1800);
+
     @Test
     public void dequeTestMain() throws Exception {
-        Product honda = new Product("Honda", 34000, 1800);
-        Product acura = new Product("Acura", 49000, 2200);
-        Product toyota = new Product("Toyota", 34500, 1500);
-        Product fiat = new Product("Fiat", 36000, 1800);
+        // create queue and add a few elements
+        ArrayDeque<Product> products = new ArrayDeque<>();
+        products.add(honda);
+        products.add(toyota);
+        products.offer(acura);
+        System.out.println("queue elements");
+        products.forEach(p -> System.out.println(p.getName()));
 
+        System.out.println("read without removing elements");
+        System.out.println(products.element());
+
+        System.out.println("removing elements");
+        System.out.println(products.remove());
+        System.out.println(products.remove());
+        System.out.println(products.remove());
+        // following call would throw exception because nothing else to remove
+//        System.out.println(products.remove());
+        // but poll just returns null
+        System.out.println(products.poll());
+    }
+
+        @Test
+    public void dequeComparatorTestMain() throws Exception {
         // define priority queue using comparator
         ArrayDeque<Product> products = new ArrayDeque<Product>();
         products.offer(acura);
