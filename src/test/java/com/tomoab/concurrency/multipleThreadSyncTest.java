@@ -1,5 +1,6 @@
 package com.tomoab.concurrency;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,6 +10,7 @@ import static org.junit.Assert.*;
  */
 public class multipleThreadSyncTest {
     @Test
+    @Ignore
     public void multipleThreadSyncMain() throws Exception {
         // 1000 threads WITH synchronization, which should add to 1,000,000
         LongWrapper lws = new LongWrapper(0L);
