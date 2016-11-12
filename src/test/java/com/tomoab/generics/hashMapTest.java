@@ -2,6 +2,7 @@ package com.tomoab.generics;
 
 import com.tomoab.Person;
 import org.junit.Test;
+import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 
 import java.time.*;
 import java.time.temporal.TemporalAdjusters;
@@ -40,5 +41,28 @@ public class hashMapTest {
         // sort decreasing age
         Collections.sort(madMen, new ReverseComparator<>(new AgeComparator()));
         System.out.println(madMen);
+    }
+
+    @Test
+    public void doHashMapPerfTests() {
+
+        // TODO: THIS NEEDS WORK
+
+        int MAX_ITEMS = 50000;
+
+        // create large array list
+        ArrayList<String> arrayList = new ArrayList<>();
+        for (int i = 0; i < MAX_ITEMS; i++) {
+            String s = randomAlphabetic(30);
+            arrayList.add(s);
+        }
+
+        // do lookups
+        long startTime = System.currentTimeMillis();
+        for (int i = 0; i < MAX_ITEMS; i++) {
+            String s = arrayList.get(i);
+        }
+        long endTime = System.currentTimeMillis();
+        System.out.println("getting " + MAX_ITEMS + " from ArrayList = " + (endTime - startTime) + " ms");
     }
 }
