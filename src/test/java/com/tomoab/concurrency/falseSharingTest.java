@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 public class falseSharingTest {
     @Test
     public void falseSharingTestMain() throws Exception {
+
         // demonstrate false sharing impact on performance
         FalseSharing fs = new FalseSharing();
         fs.run();
