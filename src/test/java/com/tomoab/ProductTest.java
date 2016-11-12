@@ -12,7 +12,7 @@ public class ProductTest {
     public void getName() throws Exception {
         Product honda = new Product("Honda", 34000, 1800);
         assertEquals(honda.getName(), "Honda");
-        assertEquals(honda.getWeight(), 18000);
+        assertEquals(honda.getWeight(), 1800);
         assertEquals(honda.getCost(), 34000);
     }
 }
