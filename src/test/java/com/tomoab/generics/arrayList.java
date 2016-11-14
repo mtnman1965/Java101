@@ -1,11 +1,10 @@
 package com.tomoab.generics;
 
 import com.tomoab.Product;
+import com.tomoab.Shipment;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.*;
 
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 
@@ -13,6 +12,46 @@ import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
  * arrayList
  */
 public class arrayList {
+
+    private Product honda = new Product("Honda", 34000, 1800);
+    private Product acura = new Product("Acura", 49000, 2200);
+    private Product toyota = new Product("Toyota", 34500, 1500);
+    private Product lexus = new Product("Lexus", 54500, 2500);
+    private Product ford = new Product("Ford", 34000, 1800);
+    private Product subaru = new Product("Subaru", 32000, 1800);
+    private Product fiat = new Product("Fiat", 36000, 1800);
+
+    @Test
+    public void doShipment() throws Exception {
+        // create shipment object
+        Shipment shipment = new Shipment();
+        shipment.add(acura);
+        shipment.add(toyota);
+        shipment.add(lexus);
+        shipment.add(honda);
+
+        // iterate through
+        List<Product> productsToShip = shipment.getProducts();
+        for (Product product : productsToShip) {
+            System.out.println("shipping " + product.getName());
+        }
+
+        // prepare shipment
+        shipment.prepare();
+        System.out.println("cheap products");
+        System.out.println(shipment.getCheapProducts());
+        System.out.println("expensive products");
+        System.out.println(shipment.getExpensiveProducts());
+    }
+
+    @Test
+    public void doArrayList() throws Exception {
+        // lists are collections with iteration order
+        // they have an index
+        ArrayList<Product> products = new ArrayList<Product>();
+        Collections.addAll(products, acura, toyota, ford);
+        System.out.println(products);
+    }
 
     @Test
     public void arrayListTest() throws Exception {
