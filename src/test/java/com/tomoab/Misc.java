@@ -65,7 +65,7 @@ public class Misc {
         System.out.println("Logging level is now: " + logger.getLevel());
 
         // write out a few logging calls
-        logger.log(Level.SEVERE, "severe log");
+        logger.log(Level.SEVERE, "severe log!");
         logger.severe("severe log 2");
         logger.log(Level.INFO, "info log");
         logger.info("info log 2");
