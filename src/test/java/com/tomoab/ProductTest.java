@@ -23,9 +23,10 @@ public class ProductTest {
 
         // New Chevy
         // this is a heavy vehicle, but the price is right
-        Product toyota = new Product("Chevy", 22000, 1900);
+        // price isn't that low!
+        Product toyota = new Product("Chevy", 25000, 1900);
         assertEquals(toyota.getName(), "Chevy");
         assertEquals(toyota.getWeight(), 1900);
-        assertEquals(toyota.getCost(), 22000);
+        assertEquals(toyota.getCost(), 25000);
     }
 }
