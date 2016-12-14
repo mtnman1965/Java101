@@ -22,18 +22,27 @@ public class ProductTest {
         assertEquals(toyota.getCost(), 29000);
 
         // New Chevy
-        // this is a heavy vehicle, but the price is right
-        // price isn't that low!
         Product chevy = new Product("Chevy", 25000, 1950);
         assertEquals(chevy.getName(), "Chevy");
         assertEquals(chevy.getWeight(), 1950);
         assertEquals(chevy.getCost(), 25000);
 
-        // new porche
+        // new Porche
         Product porsche = new Product("Porsche 911", 89400, 3150);
         assertEquals(porsche.getName(), "Porsche 911");
         assertEquals(porsche.getWeight(), 3150);
         assertEquals(porsche.getCost(), 89400);
 
+        // new LexusRX
+        Product lexusRX = new Product("Lexus RX", 43020, 3500);
+        assertEquals(lexusRX.getName(), "Lexus RX");
+        assertEquals(lexusRX.getWeight(), 3500);
+        assertEquals(lexusRX.getCost(), 43020);
+
+        // new LexusRX
+        Product lexusIS = new Product("Lexus IS", 37825, 3583);
+        assertEquals(lexusIS.getName(), "Lexus IS");
+        assertEquals(lexusIS.getWeight(), 3583);
+        assertEquals(lexusIS.getCost(), 37825);
     }
 }
