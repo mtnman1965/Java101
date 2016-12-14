@@ -48,9 +48,15 @@ public class arrayList {
     public void doArrayList() throws Exception {
         // lists are collections with iteration order
         // they have an index
-        ArrayList<Product> products = new ArrayList<Product>();
-        Collections.addAll(products, acura, toyota, ford);
+        ArrayList<Product> products = new ArrayList<>();
+        Collections.addAll(products, acura, toyota, ford, subaru, fiat);
         System.out.println(products);
+        assert (products.contains(acura));
+        assert (products.contains(toyota));
+        assert (products.contains(ford));
+        assert (products.contains(subaru));
+        assert (products.contains(fiat));
+        assert (!products.contains(honda));
     }
 
     @Test
