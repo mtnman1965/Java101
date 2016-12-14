@@ -28,5 +28,12 @@ public class ProductTest {
         assertEquals(toyota.getName(), "Chevy");
         assertEquals(toyota.getWeight(), 1950);
         assertEquals(toyota.getCost(), 25000);
+
+        // new porche
+        Product porsche = new Product("Porsche 911", 89400, 3150);
+        assertEquals(toyota.getName(), "Porsche 911");
+        assertEquals(toyota.getWeight(), 3150);
+        assertEquals(toyota.getCost(), 89400);
+
     }
 }
