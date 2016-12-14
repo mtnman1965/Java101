@@ -40,7 +40,5 @@ public class ProductTest {
         assertEquals(tesla.getName(), "Tesla Model S");
         assertEquals(tesla.getWeight(), 4608);
         assertEquals(tesla.getCost(), 68000);
-
-
     }
 }
