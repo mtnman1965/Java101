@@ -33,11 +33,17 @@ public class ProductTest {
         assertEquals(porsche.getWeight(), 3150);
         assertEquals(porsche.getCost(), 89400);
 
-        // new Tesla
-        Product tesla = new Product("Tesla Model S", 68000, 4608);
-        assertEquals(tesla.getName(), "Tesla Model S");
-        assertEquals(tesla.getWeight(), 4608);
-        assertEquals(tesla.getCost(), 68000);
+        // new Tesla Model S
+        Product teslaModelS = new Product("Tesla Model S", 68000, 4608);
+        assertEquals(teslaModelS.getName(), "Tesla Model S");
+        assertEquals(teslaModelS.getWeight(), 4608);
+        assertEquals(teslaModelS.getCost(), 68000);
+
+        // new Tesla Model X
+        Product teslaModelX = new Product("Tesla Model X", 74000, 5271);
+        assertEquals(teslaModelX.getName(), "Tesla Model X");
+        assertEquals(teslaModelX.getWeight(), 5271);
+        assertEquals(teslaModelX.getCost(), 74000);
 
         // new LexusRX
         Product lexusRX = new Product("Lexus RX", 43020, 3500);
